@@ -80,8 +80,8 @@
 					data = settings.source.sort().filter(function(element) {
 						// matching from start, or anywhere in the string?
 						if (settings.matchFromStart) {
-							// from start
-							element_text, re = new RegExp('^' + text, 'i');
+							// from start of string or *word*
+							element_text, re = new RegExp('^' + text + '|\\s' + text, 'i');
 						} else {
 							// anywhere
 							element_text, re = new RegExp(text, 'i');
